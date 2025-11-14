@@ -1,0 +1,41 @@
+(a) Seção crítica é o trecho de código que acessa um recurso
+compartilhado(como uma variável ou arquivo).
+
+(b) Uma corrida de dados (ou condição de corrida) ocorre
+quando duas ou mais threads acessam uma mesma posição de memória
+simultaneamente, e pelo menos uma dessas operações é de escrita.
+O resultado da execução torna-se imprevisível, pois depende da 
+ordem em que as threads são escalonadas pelo sistema operacional.
+
+(c) Uma violação de atomicidade em um programa concorrente acontece
+quando uma sequência de operações, que deveria ser executada como
+um bloco único e indivisível (atômico), é interrompida pela 
+execução de outra thread. 
+
+(d) A violação de ordem em um programa concorrente ocorre quando
+a ordem de execução de execução enthre operações de threads diferentes
+viola a lógica esperada do programa.
+
+(e) Uma thread adquire um lock antes de entrar em sua seção crítica.
+Enquanto essa thread mantiver o lock, qualquer outra thread que
+tente adquiri-lo ficará bloqueada (em espera). Ao sair da seção
+crítica, a thread libera o lock, permitindo que uma das threads
+em espera possa prosseguir.
+
+(f) Uma thread chama wait para se bloquear e liberar um lock associado,
+aguardando uma condição. Outra thread, ao tornar a condição verdadeira,
+chama signal para acordar uma das threads em espera ou broadcast
+para acordar todas.
+
+(g) Mecanismos de comunicação e sincronização são essenciais para
+coordenar a execução das threads e garantir a consistência dos
+dados. A comunicação permite que threads troquem informações,
+enquanto a sincronização previne que elas interfiram umas nas
+outras de forma destrutitva, evitando erros como corridas de dados
+e deadlocks;
+
+(h) Threads de um mesmo processo compartilham o mesmo espaço de 
+memória, permitindo que se comuniquem lendo e escrevendo em variáveis
+comuns. Este método é muito eficiente, mas exige o uso de mecanismos
+de sincronização para garantir que os acessos à memória compartilhada
+sejam feitos de forma segura e orientada.

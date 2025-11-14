@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "pthread.h": "c",
+        "Q2.C": "cpp"
+    },
+    "java.debug.settings.onBuildFailureProceed": true
+}

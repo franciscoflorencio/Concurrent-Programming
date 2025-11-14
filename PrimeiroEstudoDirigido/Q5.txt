@@ -1,0 +1,14 @@
+int x=0; //variavel global
+(0) T1:                 T2:         T3:
+(1) x = x-1;            x = x+1;    x = x+1;
+(2) x = x+1;            x = x-1;    if(x == 1)
+(3) x = x-1;                            printf("%d",x);
+(4) if (x == -1)
+(5)     printf("%d",x);
+(6)
+
+QUERO ENCONTRAR: 1, −1, 0, 2, −2, 3, −3, 4, −4
+
+1: T3
+-1: T1
+0: 
