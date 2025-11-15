@@ -95,7 +95,7 @@ class Primo implements Runnable {
           ehPrimo = false;
         }
         else {
-          for (int i = 3; i * i < num; i += 2) {
+          for (int i = 3; i * i <= num; i += 2) {
               if (num % i == 0){
                 ehPrimo = false;
                 break;
