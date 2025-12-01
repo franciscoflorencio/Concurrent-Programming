@@ -30,7 +30,7 @@ void DepoisLeitores() {
     sem_post(&em_l);
 }
 
-void AntesLeitores() {
+void AntesEscritores() {
     sem_wait(&em_e);
 
     e++;
@@ -40,7 +40,7 @@ void AntesLeitores() {
     sem_wait(&escr);
 }
 
-void DepoisLeitores() {
+void DepoisEscritores() {
     sem_post(&escr);
     sem_wait(&em_e);
 
